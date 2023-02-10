@@ -5,15 +5,12 @@ public class Task_2 {
         System.out.printf("Простые числа в диапозоне от 1 до %d:\n", number);
         for (int i = 2; i <= number; i++) {
             for (int j = 2; j <= i; j++) {
-                if (i % j == 0) {
-                    counter++;
-                }
+                if (i % j == 0) counter++;
             }
             if (counter == 1) {
                 System.out.println(i);
-                counter = 0;
-            } else
-                counter = 0;
+            } 
+            counter = 0;
         }
     }
 }

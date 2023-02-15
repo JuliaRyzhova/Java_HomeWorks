@@ -6,7 +6,6 @@ import java.util.logging.SimpleFormatter;
 import java.util.logging.XMLFormatter;
 
 public class Task_1_1 {
-    static Logger xml_ = Logger.getLogger(Task_1_1.class.getName());
 
     public static void main(String[] args) throws SecurityException, IOException {
         int[] arr = new int[] { 3, 6, 1, 0, 5, 8, 12, 45, 10, 11, 5, 2 };
@@ -18,17 +17,19 @@ public class Task_1_1 {
     public static int[] bubble_sort(int[] array) throws SecurityException, IOException {
         // Запись логов в txt-файл
         Logger text_logger = Logger.getLogger(Task_1_1.class.getName());
-        FileHandler filetext = new FileHandler("C:/Users/16-jl/Study/Java/HomeWorks/HomeWork_2/log_for_HW2.txt", true);
+        FileHandler filetext = new FileHandler("C:/Users/16-jl/Study/Java/HomeWorks/HomeWork_2/log_for_HW2.txt",
+                true);
         text_logger.addHandler(filetext);
         SimpleFormatter sFormat = new SimpleFormatter();
         filetext.setFormatter(sFormat);
         // Запись логов в xml-файл
         Logger xml_logger = Logger.getLogger(Task_1_1.class.getName());
-        FileHandler file = new FileHandler("C:/Users/16-jl/Study/Java/HomeWorks/HomeWork_2/log.xml", 104857600, 200, true);
+        FileHandler file = new FileHandler("C:/Users/16-jl/Study/Java/HomeWorks/HomeWork_2/log.xml", 104857600, 200,
+                true);
         xml_logger.addHandler(file);
         XMLFormatter xmlform = new XMLFormatter();
         file.setFormatter(xmlform);
-        
+
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array.length - 1; j++) {
                 if (array[j] > array[j + 1]) {

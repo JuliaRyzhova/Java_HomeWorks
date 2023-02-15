@@ -40,7 +40,6 @@ public class Task_1_1 {
                     xml_logger.info(Arrays.toString(array));
                 }
             }
-
         }
         return array;
     }

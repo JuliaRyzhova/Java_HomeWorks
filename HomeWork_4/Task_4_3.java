@@ -59,7 +59,7 @@ public class Task_4_3 {
         if ((!oper.equals("+")) & (!oper.equals("-")) & (!oper.equals("*")) & (!oper
                     .equals("/")) & (!oper.equals("отмена"))) {
                 System.out.println("Неправильная операция. Попробуйте снова!");
-                input_operation(scanner);
+                oper = input_operation(scanner);
                 scanner.nextLine();
         }
         return oper;
